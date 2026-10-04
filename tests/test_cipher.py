@@ -1,4 +1,6 @@
-from caesar_cipher import decrypt, encrypt
+import pytest
+
+from caesar_cipher import caesar, decrypt, encrypt
 from caesar_cipher.env import load_env
 
 
@@ -37,3 +39,13 @@ def test_decrypt_roundtrip():
 def test_decrypt_wraps_around_alphabet():
     assert decrypt("abc", 3) == "xyz"
     assert decrypt("def", 29) == "abc"
+
+
+def test_caesar_encode_and_decode():
+    assert caesar("hello", 5, "encode") == "mjqqt"
+    assert caesar("mjqqt", 5, "decode") == "hello"
+
+
+def test_caesar_unknown_direction():
+    with pytest.raises(ValueError):
+        caesar("hello", 5, "sideways")

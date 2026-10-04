@@ -14,7 +14,7 @@ A beginner-friendly Python program that encodes and decodes messages with the Ca
 
 ## 🧭 Overview
 
-The Caesar cipher shifts every letter by a fixed number of places (with a shift of 3, `E` becomes `H`). This project, from Udemy's *100 Days of Code: The Complete Python Pro Bootcamp* (Day 8), finds letter positions with `list.index` and wraps around the alphabet with the modulo operator. Parts 1 and 2 cover encryption and decryption; a combined program follows in Part 3. Code lives in `src/`, tests in `tests/`, docs in `docs/`.
+The Caesar cipher shifts every letter by a fixed number of places (with a shift of 3, `E` becomes `H`). This project, from Udemy's *100 Days of Code: The Complete Python Pro Bootcamp* (Day 8), finds letter positions with `list.index` and wraps around the alphabet with the modulo operator. The interactive program lets you encode or decode as many messages as you like. Code lives in `src/`, tests in `tests/`, docs in `docs/`.
 
 ## 📋 Requirements
 
