@@ -1,4 +1,4 @@
-from caesar_cipher import encrypt
+from caesar_cipher import decrypt, encrypt
 from caesar_cipher.env import load_env
 
 
@@ -24,3 +24,16 @@ def test_load_env(tmp_path):
     f.write_text("# c\nA=1\nB='two'\n", encoding="utf-8")
     assert load_env(f) == {"A": "1", "B": "two"}
     assert load_env(tmp_path / "missing") == {}
+
+
+def test_decrypt_basic():
+    assert decrypt("mjqqt", 5) == "hello"
+
+
+def test_decrypt_roundtrip():
+    assert decrypt(encrypt("Hello, World!", 7), 7) == "Hello, World!"
+
+
+def test_decrypt_wraps_around_alphabet():
+    assert decrypt("abc", 3) == "xyz"
+    assert decrypt("def", 29) == "abc"

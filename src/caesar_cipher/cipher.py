@@ -1,5 +1,5 @@
 ## @file cipher.py
-#  @brief Caesar cipher encryption.
+#  @brief Caesar cipher encryption and decryption.
 
 from caesar_cipher.constants import ALPHABET
 
@@ -19,3 +19,11 @@ def encrypt(text: str, shift: int) -> str:
         else:
             result.append(char)
     return "".join(result)
+
+
+def decrypt(text: str, shift: int) -> str:
+    ## @brief Decrypt a Caesar-cipher text.
+    #  @param text  Encrypted text.
+    #  @param shift Shift that was used to encrypt.
+    #  @return The original text.
+    return encrypt(text, -shift)
