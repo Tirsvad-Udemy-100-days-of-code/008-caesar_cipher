@@ -57,6 +57,8 @@ python -m caesar_cipher
 
 or, after installation, `caesar-cipher`.
 
+![Caesar cipher running in a terminal](docs/images/screenshot.svg)
+
 ## 🧪 Tests
 
 ```bash
