@@ -1,6 +1,6 @@
 # 🔐 Caesar Cipher
 
-A beginner-friendly Python program that encodes messages with the Caesar cipher.
+A beginner-friendly Python program that encodes and decodes messages with the Caesar cipher.
 
 ## 📚 Table of Contents
 
@@ -14,7 +14,7 @@ A beginner-friendly Python program that encodes messages with the Caesar cipher.
 
 ## 🧭 Overview
 
-The Caesar cipher shifts every letter by a fixed number of places (with a shift of 3, `E` becomes `H`). This project, from Udemy's *100 Days of Code: The Complete Python Pro Bootcamp* (Day 8), finds letter positions with `list.index` and wraps around the alphabet with the modulo operator. Part 1 covers encryption; decryption and a combined program follow in later parts. Code lives in `src/`, tests in `tests/`, docs in `docs/`.
+The Caesar cipher shifts every letter by a fixed number of places (with a shift of 3, `E` becomes `H`). This project, from Udemy's *100 Days of Code: The Complete Python Pro Bootcamp* (Day 8), finds letter positions with `list.index` and wraps around the alphabet with the modulo operator. Parts 1 and 2 cover encryption and decryption; a combined program follows in Part 3. Code lives in `src/`, tests in `tests/`, docs in `docs/`.
 
 ## 📋 Requirements
 
